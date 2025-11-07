@@ -13,51 +13,86 @@ export default function HorizontalReel() {
   const worlds = [
     {
       id: 'MyLettering',
-      title: 'MyLettering',
+      label: 'LETTERING SCHOOL • BOOKS • SYSTEMS',
+      title: 'MyLettering — Turning Letters into a Learning System',
+      coreLine:
+        'From a visual obsession to a full ecosystem: books, courses, and a method that actually builds skills.',
+      body:
+        'MyLettering started as ink on paper and grew into a structured path for creatives who want more than pretty quotes. Three volumes of Lettering Sin Límites, workshops and online courses guide students from first strokes to confident compositions with clear frameworks, not guesswork. Every exercise, layout and demo is designed so people understand why something works — and can repeat it without copying.',
+      highlights: [
+        '30,000+ books sold in Spanish-speaking markets',
+        '2,000+ students across 8+ years',
+        'Progressive structure: fundamentals → composition → style systems',
+        'Built as a replicable method, not a one-off class',
+      ],
+      ctas: ['Explore MyLettering', 'See the 3-book series'],
       palette: {
-        from: '#ff7bd5',
-        via: '#ffb86c',
-        to: '#ffd166',
         bg: 'from-fuchsia-500/70 via-amber-400/60 to-yellow-300/60',
+        accent: 'from-pink-400 via-orange-300 to-amber-200',
       },
-      accent: 'from-pink-400 via-orange-300 to-amber-200',
-      copy: 'Custom letterforms and typographic experiments with neon gradients and ink textures.',
+      layers: 'lettering',
     },
     {
       id: 'Isthmus',
-      title: 'Isthmus',
+      label: 'ACADEMIC BACKBONE • 15+ YEARS',
+      title: 'Isthmus — Teaching Architects to Think in Systems',
+      coreLine:
+        'Fifteen years shaping architects in Panama, where presentation, tools and thinking matter as much as form.',
+      body:
+        "At Isthmus, my work goes beyond software demos. I’ve taught applied AI, intro UI/UX for designers, project presentation, visual communication and Photoshop at the undergraduate level, always pushing one idea: a strong project needs a strong argument. Studios, critiques and workshops are built to make students explain, defend and refine — so they don’t just show beautiful boards, they tell coherent stories.",
+      highlights: [
+        '15+ years teaching architecture & communication',
+        'Courses integrating AI, UI/UX, and narrative into design education',
+        'Known for improving briefs, rubrics and critique formats',
+        'Bridge between academia, digital tools and real-world expectations',
+      ],
+      ctas: ['View teaching highlights', 'See studio & workshop formats'],
       palette: {
-        from: '#7bd0ff',
-        via: '#6cfaff',
-        to: '#3cf2b8',
-        bg: 'from-sky-500/70 via-cyan-400/60 to-emerald-300/60',
+        bg: 'from-slate-800/80 via-indigo-900/60 to-blue-900/60',
+        accent: 'from-sky-300 via-cyan-200 to-emerald-200',
       },
-      accent: 'from-sky-300 via-cyan-200 to-emerald-200',
-      copy: 'A bridge between ideas—flowing UI, archipelago layouts, and sea-glass hues.',
+      layers: 'isthmus',
     },
     {
       id: 'ParentMap',
-      title: 'ParentMap',
+      label: 'HOMESCHOOL • PLANNERS • KIDS’ TOOLS',
+      title: 'ParentMap — Order for Real Homeschool Families',
+      coreLine: 'Planning tools born on an actual kitchen table, not in a marketing deck.',
+      body:
+        'ParentMap.co is a homeschool planning system designed for parents who juggle real kids, real schedules and real convictions. HÁBITO brings the year, the week and everyday habits into one clear layout, so you can see what matters without drowning in trackers. Alongside it, ClassicalKid.co offers a focused digital space for kids to practice Classical Conversations®-style content with clean prompts and zero clutter. Together they turn “we should be more consistent” into a calm, repeatable rhythm.',
+      highlights: [
+        'HÁBITO: structured weekly & yearly views, habit tracking, reflection spaces',
+        'Built from lived homeschool experience (2 parents, 2 kids, actual chaos)',
+        'ClassicalKid.co: bite-sized review, simple interface, independent practice',
+        'Subtle faith-driven coherence without clichés',
+      ],
+      ctas: ['See the ParentMap system', 'Preview HÁBITO layouts', 'See how ClassicalKid works'],
       palette: {
-        from: '#c299ff',
-        via: '#8a7dff',
-        to: '#5f6cff',
-        bg: 'from-violet-500/70 via-indigo-500/60 to-blue-500/60',
+        bg: 'from-amber-200/30 via-emerald-300/30 to-sky-200/30',
+        accent: 'from-amber-300 via-emerald-300 to-sky-300',
       },
-      accent: 'from-violet-300 via-indigo-300 to-blue-300',
-      copy: 'Guidance through the galaxy—soft gradients, guiding lines, and constellation dots.',
+      layers: 'parentmap',
     },
     {
       id: 'ArqEdu',
-      title: 'ArqEdu',
+      label: 'ONLINE CONTINUING ED • ARCHITECTS',
+      title: 'ArqEdu — Continuing Education with Real Standards',
+      coreLine:
+        'An independent online campus for architects who want depth, not random YouTube playlists.',
+      body:
+        'ArqEdu.com is being built as a focused platform for architects and designers who need serious, complementary training. Diploma programs connect BIM, visualization, communication and strategic thinking, anchored in academic rigor and industry practice. It extends what works in the classroom into an online format that respects attention, time and professional goals. This is where universities, studios and individual architects find structured programs instead of fragmented tutorials.',
+      highlights: [
+        'Independent brand with its own identity',
+        'Target: 3 certified diploma programs in year one',
+        'Bridges architecture schools and real-world workflows',
+        'Designed as a scalable ecosystem, not a one-shot course',
+      ],
+      ctas: ['Explore the ArqEdu vision', 'View sample curriculum map'],
       palette: {
-        from: '#ff8fb1',
-        via: '#ff6f91',
-        to: '#ff5d8f',
-        bg: 'from-rose-500/70 via-fuchsia-500/60 to-purple-500/60',
+        bg: 'from-blue-900/70 via-slate-900/70 to-emerald-900/60',
+        accent: 'from-teal-300 via-sky-300 to-indigo-300',
       },
-      accent: 'from-rose-300 via-fuchsia-300 to-purple-300',
-      copy: 'Architecting learning—modular blocks, layered depth, and lush studio lighting.',
+      layers: 'arquedu',
     },
   ];
 
@@ -74,14 +109,12 @@ export default function HorizontalReel() {
       speedRef.current += e.deltaY * 0.6; // amplify vertical scroll
     };
 
-    let touchStartX = 0;
     let lastX = 0;
     let dragging = false;
 
     const onTouchStart = (e) => {
       dragging = true;
-      touchStartX = e.touches[0].clientX;
-      lastX = touchStartX;
+      lastX = e.touches[0].clientX;
     };
 
     const onTouchMove = (e) => {
@@ -130,7 +163,7 @@ export default function HorizontalReel() {
   const looped = [...worlds, ...worlds];
 
   return (
-    <section className="relative w-full h-[120vh] bg-gradient-to-b from-black via-zinc-950 to-black">
+    <section id="reel" className="relative w-full h-[140vh] bg-gradient-to-b from-black via-zinc-950 to-black">
       <div className="pointer-events-none absolute inset-0 opacity-60 bg-[radial-gradient(1000px_600px_at_20%_20%,rgba(99,102,241,0.25),transparent_60%),radial-gradient(800px_500px_at_80%_60%,rgba(34,197,94,0.18),transparent_60%),radial-gradient(900px_700px_at_50%_120%,rgba(236,72,153,0.15),transparent_60%)]" />
       <div ref={containerRef} className="relative h-full overflow-hidden">
         <div ref={trackRef} className="will-change-transform flex h-full" style={{ transform: 'translate3d(0,0,0)' }}>
