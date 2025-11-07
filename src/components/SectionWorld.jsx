@@ -109,8 +109,11 @@ export default function SectionWorld({ world }) {
       <LayerGraphics type={world.layers} yBack={yBack} yMid={yMid} yFront={yFront} />
 
       <motion.div style={{ y: yFront }} className="relative h-full flex items-center">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 w-full items-center">
-          <div className="md:col-span-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 w-full items-stretch">
+          <div
+            className="md:col-span-6 pr-2 md:pr-4 max-h-[70vh] md:max-h-[75vh] overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-white/20 hover:scrollbar-thumb-white/40"
+            data-stop-hscroll
+          >
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -168,7 +171,7 @@ export default function SectionWorld({ world }) {
                 {world.ctas.map((c, idx) => (
                   <button
                     key={idx}
-                    className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition text-white backdrop-blur border border-white/10"
+                    className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition text-white backdrop-blur border border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                   >
                     {c}
                   </button>
